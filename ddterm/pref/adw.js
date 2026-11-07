@@ -51,7 +51,6 @@ class WindowPage extends PreferencesPage {
         const { settings, gettext_domain } = this;
 
         this.add(new WindowAppearanceGroup({ settings, gettext_domain }));
-        this.add(new BackgroundEffectsGroup({ settings, gettext_domain }));
         this.add(new PositionSizeGroup({ settings, gettext_domain, monitors: this.monitors }));
         this.add(new BehaviorGroup({ settings, gettext_domain }));
         this.add(new AnimationGroup({ settings, gettext_domain }));
@@ -78,6 +77,7 @@ class TerminalPage extends PreferencesPage {
         const { settings, gettext_domain } = this;
 
         this.add(new TextGroup({ settings, gettext_domain }));
+        this.add(new BackgroundEffectsGroup({ settings, gettext_domain }));
         this.add(new ColorsGroup({ settings, gettext_domain }));
         this.add(new CommandGroup({ settings, gettext_domain }));
         this.add(new ScrollingGroup({ settings, gettext_domain }));
