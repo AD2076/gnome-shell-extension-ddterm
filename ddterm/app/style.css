@@ -4,8 +4,24 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+#ddterm-window {
+    border-radius: 0 0 12px 12px;
+    border: 1px solid @borders;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+#ddterm-window paned {
+    border-radius: inherit;
+}
+
 #ddterm-window tabbar button image {
     -gtk-icon-style: symbolic;
+}
+
+#ddterm-window tabbar tabbutton {
+    min-height: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 #ddterm-window.transparent-background {
