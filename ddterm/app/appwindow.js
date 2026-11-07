@@ -751,9 +751,7 @@ export class AppWindow extends Gtk.ApplicationWindow {
 
     set background_transparency_enabled(value) {
         const context = this.get_style_context();
-
-        if (this.#background_transparency_enabled === value)
-            return;
+        const changed = this.#background_transparency_enabled !== value;
 
         this.#background_transparency_enabled = value;
 
@@ -762,7 +760,8 @@ export class AppWindow extends Gtk.ApplicationWindow {
         else
             context.remove_class('transparent-background');
 
-        this.notify('background-transparency-enabled');
+        if (changed)
+            this.notify('background-transparency-enabled');
     }
 
     #update_resize_handles() {

@@ -5,24 +5,17 @@
  */
 
 #ddterm-window {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
     border-radius: 0 0 12px 12px;
     border: 1px solid @borders;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
 #ddterm-window paned {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
     border-radius: inherit;
-}
-
-#ddterm-window tabbar button image {
-    -gtk-icon-style: symbolic;
-}
-
-#ddterm-window tabbar tabbutton {
-    min-height: 0;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    border-radius: 12px;
 }
 
 #ddterm-window.transparent-background {
